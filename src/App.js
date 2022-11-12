@@ -53,6 +53,8 @@ const App = () => {
                 <TableCell>Apellidos</TableCell>
                 <TableCell>Correo Electronico</TableCell>
                 <TableCell>Telefono</TableCell>
+                <TableCell>Creado</TableCell>
+                <TableCell>Editado</TableCell>
                 <TableCell>Opciones</TableCell>
               </TableRow>
             </TableHead>
@@ -67,6 +69,8 @@ const App = () => {
                     <TableCell>{row?.last_name}</TableCell>
                     <TableCell>{row?.email}</TableCell>
                     <TableCell>{row?.phone}</TableCell>
+                    <TableCell>{`${new Date(row?.created_at).toLocaleDateString()} ${new Date(row?.created_at).toLocaleTimeString()}`}</TableCell>
+                    <TableCell>{`${new Date(row?.updated_at).toLocaleDateString()} ${new Date(row?.updated_at).toLocaleTimeString()}`}</TableCell>
                     <TableCell>
                       <Button
                         variant="outlined"
